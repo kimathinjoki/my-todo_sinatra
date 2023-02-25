@@ -58,7 +58,7 @@ DEPENDENCIES
   require_all (~> 3.0)
   rerun (~> 0.14.0)
   sinatra (~> 3.0, >= 3.0.5)
-  sinatra-activerecord
+  sinatra-activerecord (~> 2.0, >= 2.0.26)
   sqlite3 (~> 1.6, >= 1.6.1)
 
 BUNDLED WITH

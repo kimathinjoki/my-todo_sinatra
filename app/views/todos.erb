@@ -8,15 +8,24 @@
 
     <body>
     
-        <p> Welcomr to your list of tasks</p>
-        <ol>
-         <% @todos.each do |todo|%>
-            <li>
-                <%= todo.description %>
-            </li>
-        <% end %>
-        </ol>
-    
+
+    <% @todos.each do |x|  %>
+        <tr>
+          <th scope="row"><%= @i  %> </th>
+          <td><%= x[:todo].title %></td>
+          <td><%= x[:todo].description %></td>
+          <td><%= x[:todo].createdAt %></td>
+          <td>
+            <span class="badge <%= x[:badge] %>">
+              <%= x[:todo].status %>
+            </span>
+          </td>
+        </tr>
+      <% @i += 1 %>
+    <% end %>
+  
+     
+
     </body>
 
 </html>
